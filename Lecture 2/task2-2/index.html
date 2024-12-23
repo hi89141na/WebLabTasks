@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2-2</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 600px;
+            background: red;
+        }
+
+        .sup-img {
+            background-image: url("superior.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .sup-text {
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.459);
+            color: white;
+            position: absolute;
+            height: 200px;
+            top: 30%;
+            width: 100%;
+        }
+
+        /**main styling*/
+        main {
+            padding: 40px 0;
+            display: flex;
+            width: 80%;
+            margin: auto;
+        }
+
+        .left {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            padding: 0 50px;
+            gap: 10px
+        }
+
+        .left h1 {}
+
+        .left p:nth-of-type(1) {
+            text-align: justify;
+        }
+
+        .left ul {
+            width: 70%;
+            padding-left: 15%;
+        }
+
+        .left p:nth-of-type(2) {
+            color: red;
+        }
+
+        .left p:nth-of-type(2) a {
+            text-decoration: none;
+        }
+
+        .left table {
+            width: 60%;
+        }
+
+        .left table th {
+            color: red;
+            text-align: left;
+            font-weight: normal;
+        }
+
+        .left table,
+        .left td,
+        th {
+            border-collapse: collapse;
+            border: 1px solid black;
+            padding: 2px;
+        }
+
+        /**Right side styling*/
+        .right {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .right .text {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            text-align: center;
+        }
+
+        .right .text p:nth-of-type(1) {
+            font-size: 18px;
+            color: purple;
+        }
+
+        .right .text p:nth-of-type(2) {
+            font-size: 18px;
+            color: red;
+        }
+
+        .right .text p:nth-of-type(3) {
+            margin: 15px 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .right .text p a {
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .right-img-1,
+        .right-img-2 {
+            background-image: url("img1.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 200px;
+            width: 400px;
+            align-self: center;
+        }
+
+        /**footer styling*/
+        footer {
+            width: 100%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        footer p {
+            background: #000;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px 0;
+            text-align: center;
+        }
+
+        footer .pictures {
+            display: flex;
+            width: 90%;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="sup-img"></div>
+        <div class="sup-text">International Conference on Advancements in <br> Computational Sciences</div>
+    </header>
+    <main>
+        <div class="left">
+            <h1>Welcome</h1>
+            <p>International Conference on Advancements in Computational Sciences (ICACS'18) aims to provide an
+                international forum for presenting the advances and newly emerging trends in computer science. The goal
+                of ICACS'18 is to bring together renowned scientists and leading researchers from academia and industry
+                in one platform with the focus of exchanging ideas on modern computing innovations and applications
+                across various fields such as health-care, business, industry, etc. and to establish new collaborations
+                in relevant areas in order to produce standardized quality research result. ICACS 18 will hold six major
+                tracks including</p>
+            <ul>
+                <li>Artificial Intelligence</li>
+                <li>Data Sciences & Knowledge Systems</li>
+                <li>Human Computer Interaction (HCI)</li>
+                <li>Multimedia and Graphics</li>
+                <li>Networks &; Communication Technologies</li>
+                <li>Software Engineering</li>
+            </ul>
+            <p>Selected Papers will be published in International Journal of Information Technology and Web Engineering
+                (IJITWE) <a href="#">About this Journal</a></p>
+            <h2>Important Dates:</h2>
+            <table>
+                <tr>
+                    <th>Paper Submission Deadline (extended)</th>
+                    <th>15th September 2017</th>
+                </tr>
+                <tr>
+                    <td>Acceptance Notification</td>
+                    <td>30th November 2017</td>
+                </tr>
+                <tr>
+                    <td>Camera Ready Submission</td>
+                    <td>15th December 2017</td>
+                </tr>
+                <tr>
+                    <td>Early Bird Registration</td>
+                    <td>15th December 2017</td>
+                </tr>
+                <tr>
+                    <td>Late Registration</td>
+                    <td>1st January 2018</td>
+                </tr>
+            </table>
+        </div>
+        <div class="right">
+            <div class="text">
+                <p>Extended Paper Submission</p>
+                <p>Date 15th September 2017</p>
+                <p>Venue: Lahore, Pakistan</p>
+                <p><a href="#">Accepted Articles</a></p>
+                <p><a href="#">Conference Program</a></p>
+            </div>
+            <div class="right-img-1"></div>
+            <div class="right-img-2"></div>
+        </div>
+    </main>
+    <footer>
+        <p>Sponsors</p>
+        <div class="pictures">
+            <img src="i1.jpeg" alt="i1" class="i1">
+            <img src="i2.jpeg" alt="i2" class="i2">
+            <img src="i3.jpeg" alt="i3" class="i3">
+            <img src="i4.jpeg" alt="i4" class="i4">
+            <img src="i5.jpeg" alt="i5" class="i5">
+            <img src="i6.jpeg" alt="i6" class="i6">
+            <img src="i7.jpeg" alt="i7" class="i7">
+        </div>
+        <p>International Conference on Advancements in Computational Science
+            Activates</p>
+    </footer>
+</body>
+
+</html>

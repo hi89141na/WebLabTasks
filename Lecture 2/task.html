@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        table{
+            border: 1px solid black;
+            margin: 100px auto;
+
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 2px;
+        }
+
+        .submitRow {
+            text-align: center;
+        }
+
+        .radio,
+        .checkbox {
+            display: flex;
+            justify-content: space-between;
+            gap: 5px;
+            padding: 0px 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="myTable">
+        <form action="#" target="_blank">
+            <tr>
+                <td><label for="name">Name</label></td>
+                <td><input type="text" name="name" id="name" placeholder="Enter Name"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="email" name="email" id="email" placeholder="Enter Email"></td>
+            </tr>
+            <tr>
+                <td><label for="number">Mobile Number</label></td>
+                <td><input type="text" name="number" id="number" placeholder="Enter Mobile Number" pattern="+?[0-9]+]">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="arrDate">Arrival Date: </label></td>
+                <td><input type="date" name="Date" id="arrDate"></td>
+            </tr>
+            <tr>
+                <td><label>Room Type</label></td>
+                <td class="radio">
+                    <input type="radio" id="single" name="roomType">
+                    <label for="single">Single</label>
+                    <input type="radio" id="double" name="roomType">
+                    <label for="double">Double</label>
+                    <input type="radio" id="suite" name="roomType">
+                    <label for="suite">Presidential Suite</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Preference</label></td>
+                <td class="checkbox">
+                    <input type="checkbox" name="preference" id="noSmoking">
+                    <label for="noSmoking">Non Smoking</label>
+                    <input type="checkbox" name="preference" id="internet">
+                    <label for="internet">Internet</label>
+                    <input type="checkbox" name="preference" id="firmMattress">
+                    <label for="firmMattress">Firm Mattress</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="paymentMethod">Mode of Payment</label></td>
+                <td>
+                    <select name="paymentMethod" id="paymentMethod">
+                        <option value="Card">Card</option>
+                        <option value="Cash">Cash</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="submitRow">
+                    <button type="submit">submit</button>
+                </td>
+            </tr>
+        </form>
+    </table>
+</body>
+
+</html>
