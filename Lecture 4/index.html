@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Form</title>
+    <link rel="stylesheet" href="x">
+</head>
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border:2px solid black;
+        margin: 0 auto;
+        padding: 15px;
+        width: 400px
+
+    }
+
+    form span {
+        color: red;
+        font-size: 12px;
+        text-transform: lowercase;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    }
+</style>
+
+<body>
+    <form>
+        <div class="nameDiv">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <span></span>
+        </div>
+
+        <div class="emailDiv">
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <span></span>
+        </div>
+
+        <div class="genderDiv">
+            <div>
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+            <span></span>
+        </div>
+        <div class="subjectDiv">
+            <div>
+                <label>Subjects:</label>
+                <input type="checkbox" id="pf" name="subject" value="PF">
+                <label for="pf">PF</label>
+                <input type="checkbox" id="dsa" name="subject" value="DSA">
+                <label for="dsa">DSA</label>
+            </div>
+            <span></span>
+        </div>
+        <div class="countryDiv">
+            <div>
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option value="">Select</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="UK">UK</option>
+                    <option value="India">India</option>
+                    <option value="China">China</option>
+                    <option value="Canada">Canada</option>
+                </select>
+            </div>
+            <span></span>
+        </div>
+        <div class="imageDiv">
+           <div>
+            <label for="image">Image:</label>
+            <input type="file" id="image" name="image">
+           </div>
+           <span></span>
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+<script>
+    let form = document.querySelector("form");
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent form submission until validation is complete
+        let subjects = [];
+        // Get form elements
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const gender = document.querySelector('input[name="gender"]:checked');
+        const sub = document.querySelectorAll('input[name="subject"]:checked').forEach((item) => {
+            if (item.value) {
+                subjects.push(item.value);
+            }
+
+        });
+        const country = document.getElementById('country').value;
+        const image = document.getElementById('image').value;
+        if (name === "") {
+            //  alert("Name is required.");
+            console.log("Name is required.")
+            document.querySelector(".nameDiv").querySelector("span").textContent = "Name is required";
+        }
+
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        if (email === "") {
+            //  alert("Email is required.");
+            console.log("Email is required.")
+            document.querySelector(".emailDiv").querySelector("span").textContent = "Email is required";
+        } else if (!emailPattern.test(email)) {
+            //   alert("Please enter a valid email address.");
+            console.log("Invalid email.");
+            document.querySelector(".emailDiv").querySelector("span").textContent = "invalid email";
+
+        }
+
+        if (gender === undefined || gender === null) {
+            //   alert("Please select your gender.");
+            console.log("Select your gender");
+            document.querySelector(".genderDiv").querySelector("span").textContent = "Select your gender";
+        }
+        if (subjects.length === 0) {
+            //  alert("Please select at least one subject.");
+            console.log("Select At least one subject");
+            document.querySelector(".subjectDiv").querySelector("span").textContent = "Select your subjects";
+        }
+
+        if (country === "") {
+            //alert("Please select your country.");
+            console.log("Select country");
+            document.querySelector(".countryDiv").querySelector("span").textContent = "Select your Country";
+        }
+
+        if (image === "") {
+            //alert("Please upload an image.");
+            console.log("upload image");
+            document.querySelector(".imageDiv").querySelector("span").textContent = "Select image";
+        }
+
+    });
+</script>
+<script src="./contents.js"></script>
+
+</html>
