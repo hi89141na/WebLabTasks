@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <style>
+        table,
+        tr,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        table{
+            margin: 0 auto;
+        }
+        table th {
+            border-collapse: collapse;
+            background-color: black;
+            color: white;
+        }
+        td, th{
+            padding: 10px;
+        }
+        #btn {
+            border-radius: 5px;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Sr#</th>
+                <th>Item</th>
+                <th>Unit Cost</th>
+                <th>Quantity</th>
+                <th>Cost</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Item 1</td>
+                <td id="cost1">58</td>
+                <td><input id="quantity1" type="number" placeholder="Enter Number" min="0"></td>
+                <td id="Cost1"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Item 2</td>
+                <td id="cost2">46</td>
+                <td><input id="quantity2" type="number" placeholder="Enter Number" min="0"></td>
+                <td id="Cost2"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Item 3</td>
+                <td id="cost3">1090</td>
+                <td><input id="quantity3" type="number" placeholder="Enter Number" min="0"></td>
+                <td id="Cost3"></td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: right;">Total</td>
+                <td id="totalCost"></td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: right;">GST of 15%</td>
+                <td id="GST"></td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: right;">Grand Total</td>
+                <td id="GrandTotal"></td>
+            </tr>
+            <tr>
+                <td colspan="5" style="text-align: center;"><button id="btn" onclick="calculate()">Calculate</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        const GST_RATE = 0.15;
+
+        function calculate() {
+            let cost1 = parseFloat(document.getElementById("cost1").textContent);
+            let cost2 = parseFloat(document.getElementById("cost2").textContent);
+            let cost3 = parseFloat(document.getElementById("cost3").textContent);
+            let quantity1 = parseFloat(document.getElementById("quantity1").value);
+            let quantity2 = parseFloat(document.getElementById("quantity2").value);
+            let quantity3 = parseFloat(document.getElementById("quantity3").value);
+
+            if (isNaN(quantity1) || isNaN(quantity2) || isNaN(quantity3)) {
+                alert("Please enter valid quantities");
+                return;
+            }
+
+            let Cost1 = cost1 * quantity1;
+            let Cost2 = cost2 * quantity2;
+            let Cost3 = cost3 * quantity3;
+
+            document.getElementById("Cost1").textContent = Cost1;
+            document.getElementById("Cost2").textContent = Cost2;
+            document.getElementById("Cost3").textContent = Cost3;
+
+            let totalCost = cost1 + cost2 + cost3;
+            document.getElementById("totalCost").textContent = totalCost.toFixed(2);
+
+            let gst = totalCost * GST_RATE;
+            document.getElementById("GST").textContent = gst.toFixed(2);
+
+            let grandTotal = totalCost + gst;
+            document.getElementById("GrandTotal").textContent = grandTotal.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>
