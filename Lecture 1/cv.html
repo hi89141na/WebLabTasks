@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hina Nadeem</title>
+        <style>
+            * {
+            font-family: cursive;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            background: #4C2C2E;
+        }
+
+        .container {
+            margin: 0px auto;
+            width: 600px;
+            border: 1px solid black;
+            padding: 2%;
+            background: #E8B287;
+            border-radius: 0px 0px 100px 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            color: #2e1c1d;
+        }
+
+        @media(max-width:700px) {
+            .container {
+                width: 90%;
+                border-radius: 0px 0px 70px 70px;
+            }
+
+            h2,
+            .btn {
+                font-size: 1rem;
+            }
+
+
+        }
+
+        @media(max-width:400px) {
+            .container {
+                width: 90%;
+                border-radius: 0px 0px 40px 40px;
+            }
+
+        }
+
+        .btn {
+            padding: 5px 15px;
+            width: 200px;
+            font-size: 1.25rem;
+            font-weight: bold;
+            border-radius: 0px 15px;
+            border: none;
+            background: #4C2C2E;
+            color: #DBD3D8;
+            cursor: pointer;
+
+        }
+
+    
+        .content {
+            display: none;
+            margin: 10px;
+            width: 100%;
+        }
+
+        h2 {
+            margin: 10px 0px;
+            background: #4C2C2E;
+            color: white;
+            padding-left: 10px;
+        }
+
+        p {
+            margin: 0px 10px;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            padding-left: 10px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h2>Hina Nadeem</h2>
+            <p>A student of Software Engineering</p>
+            <p>Learning Web Developments</p>
+            <h2>Education</h2>
+            <ul>
+                <li><b>BS Software Engineering BSSE</b> Superior University</li>
+                <li><b>FSc. Pre-Engineering</b> Punjab Group of colleges</li>
+                <li><b>Matriculation in Science with biology</b> Afaq Public High School Lahore</li>
+            </ul>
+            <h2>Skills</h2>
+            <ul>
+
+                <li>C++</li>
+                <li>Java</li>
+                <li>SQL</li>
+            </ul>
+            <h2>Hobbies</h2>
+            <ul></ul>
+            <li>Reading</li>
+            <li>Cooking</li>
+            </ul>
+            <h2>Contact</h2>
+
+            <a href="mailto:hina@superior.edu.pk">hina@superior.edu.pk</a>
+        </div>
+        <button class="btn">See Info &gt;</button>
+    </div>
+    <script>
+
+        let btn = document.querySelector(".btn");
+        btn.addEventListener('click', () => {
+            const content = document.querySelector('.content');
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            if (btn.textContent == "See Info >") {
+                btn.textContent = "Hide Info >";
+            }
+            else {
+                btn.textContent = "See Info >";
+            }
+        })
+    </script>
+</body>
+
+</html>

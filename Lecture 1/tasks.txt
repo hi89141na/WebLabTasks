@@ -1,0 +1,21 @@
+-> Check all elements wether these are block or inline elements
+-> Ek Image lgani h ek ur os jb click kren to google ka page open ho new tab mein ja ke
+Inline elements:
+-> img
+-> b, i, strong, i, em, u, ins
+-> sup, sub, del, mark, small
+->span
+-> a
+-> table
+-> audio
+
+
+
+Block Elements:
+1. p
+2. h1, h2, h3, h4, h5, h6
+3. pre
+4. div
+5. ul ol
+6. form
+7. header footer section nav article aside

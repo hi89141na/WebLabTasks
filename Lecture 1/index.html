@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page 1 </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+		
+	</style>
+</head>
+<body>
+	<!-- ------------------------ Simple paragraph --------------------------- -->
+
+	<p>This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. </p>
+	<p>This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. This is some dummy content. </p>
+
+
+
+	<!-- ------------------------ Headings --------------------------- -->
+	 <h1>Heading 1</h1>
+	<h2>Heading 2</h2>
+	<h3>Heading 3</h3>
+	<h4>Heading 4</h4>
+	<h5>Heading 5</h5>
+	<h6>Heading 6</h6>
+
+
+
+	<!-- ------------------------ Text Formatting --------------------------- -->
+	<b >bold</b> 	<br>
+	
+	<strong >Also bold</strong> 	<br>
+	
+	<i >Italic text</i>  	<br>
+	
+	<em >Emphasized text also italic</em> 	<br>
+	
+	<u >Underline text</u> 	<br>
+	
+	<ins >inserted Also underline</ins> 	<br>
+	
+	Name<sup >superscript</sup>  	<br>
+	
+	Name<sub >subscript</sub>  	<br>
+	
+	<del >Deleted Text</del>	 	<br>
+	
+	<mark >Highlighted text</mark>  	<br>
+	
+	Normal vs <small >Small text</small> 	<br>
+	
+	<pre >
+		1	2
+		3
+		4
+	</pre>
+
+	<p>This</p>
+	<span >Span tag</span>  	<br>
+
+
+
+
+	<!-- ------------------------ line breaks --------------------------- -->
+	<!-- a<br>
+	b
+	c -->
+	<hr>
+
+
+
+	<!-- ------------------------ links --------------------------- -->
+	
+    <a  href="http://www.google.com" target="_blank" title="this is some text">click me</a>
+	<a href="page2.html" target="_self" title="this is some text">click me</a>
+
+
+
+
+	
+	<!-- ------------------------ Images --------------------------- -->
+	 <img src="google.jfif" style="border: 2px solid red;" alt="this is alternate text" width="100" height="100"> 
+
+
+	
+	
+
+	<!-- ------------------------ unordered list --------------------------- -->
+	<!-- list-style-type = “disc”, “square”, “circle”, “decimal”, “Iower-alpha”, “urdu”  -->
+
+	 <ul  style="list-style-type:circle ">
+		<li>item1</li>
+		<li>item2</li>
+		<li>item3
+			<ol>
+				<li>sub1</li>
+				<li>sub2</li>
+				<li>sub3</li>
+			</ol>	
+		</li>
+		<li>item4</li>
+	</ul>
+
+
+
+
+
+	<!-- ------------------------ Ordered list --------------------------- -->
+	<!-- type = “a”, “1”, “A”, “i”, “I” -->
+	<!-- start = “25” -->
+
+
+
+    <ol type="1" start="11">
+		<li>item1</li>
+		<li>item2</li>
+		<li>item3</li>
+		<li>item4</li>
+	</ol> 
+
+
+	<dl>
+		<dt>HTML</dt>
+		<dd>HyperText Markup Language</dd>
+		<dt>CSS</dt>
+		<dd>Cascading Style Sheets</dd>
+	  </dl>
+	  
+	<!-- ------------------------ table --------------------------- -->
+	<table border="1" >
+		<caption>Student table</caption>
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Marks</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>john</td>
+			<td>78</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Jason</td>
+			<td>56</td>
+		</tr>
+	</table> 
+
+
+
+
+	<!-- ------------------------ Audio  --------------------------- -->
+	<audio  controls autoplay>
+		<source src="audio1.mp3" type="audio/mp3">
+		your browser does not support this audio
+	</audio> 
+
+
+
+
+
+	<!-- ------------------------ Form  --------------------------- -->
+	 <form >
+		<input type="text" placeholder="Username" readonly>
+		<br><br>
+		
+		<input type="password" placeholder="Password" required>
+		<br><br>
+		
+		<input type="email" placeholder="Email">
+		<br><br>
+		
+		<input type="date" min="2020-10-10" max="2022-01-10">
+		<br><br>
+		
+		<label>Gender</label>
+		<br>
+		<label for="male">Male</label>
+		<input type="radio" id="male" name="gender">
+		<label for="female">Female</label>
+		<input type="radio" id="female" name="gender">
+		<br><br>
+
+		<label>Choices</label>
+		<br>
+		<label>Choice1</label>
+		<input type="checkbox" name="choice">
+		<label>Choice2</label>
+		<input type="checkbox" name="choice">
+		<label>Choice3</label>
+		<input type="checkbox" name="choice">
+		<br><br>
+		
+		<textarea rows="10" cols="30"></textarea>
+		<br><br>
+
+		<input type="url" placeholder="URL">
+		<br><br>
+		
+		<input type="number" min="10" max="60" placeholder="Age">
+		<br><br>
+		
+		<select>
+			<option>--select--</option>
+			<option>Pakistan</option>
+			<option>Australia</option>
+			<option>Norway</option>
+		</select>
+		<br><br>
+		
+		<input type="file">
+		<br><br>
+
+		<input type="submit" value="Submit">
+		<input type="reset" value="Reset">
+
+	</form>
+
+
+
+
+	<!-- ------------------------ Div  --------------------------- -->
+	
+
+
+	<!-- ------------------------ Semantic Elements/Tags  --------------------------- -->
+ <header >for header</header>
+	<footer >for footer</footer>
+	<nav >for navigation bar</nav>
+	<section >For different sections</section>
+	<article >For articles</article>
+	<aside >For side bar</aside> 
+
+
+	<p class="p1">para 1</p>
+
+	<p>para2</p> 
+
+
+
+</body>
+</html>
+
+
